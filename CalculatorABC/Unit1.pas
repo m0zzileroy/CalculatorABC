@@ -98,9 +98,8 @@ end;
 
 procedure Form1.textBox3_TextChanged(sender: Object; e: EventArgs);
 begin
-  
-end;
 
+end;
 procedure Form1.button2_Click(sender: Object; e: EventArgs);
 begin
   var a, b, c: real;

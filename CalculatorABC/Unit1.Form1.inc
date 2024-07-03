@@ -61,6 +61,7 @@ procedure InitializeComponent;
         // 
         // textBox3
         // 
+        self.textBox3.Enabled := false;
         self.textBox3.Location := new System.Drawing.Point(41, 150);
         self.textBox3.Name := 'textBox3';
         self.textBox3.Size := new System.Drawing.Size(229, 22);
