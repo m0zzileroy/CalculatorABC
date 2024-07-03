@@ -41,7 +41,13 @@ type
   end;
 
 implementation
+var a, b, c: real;
 
+procedure Error;
+ begin
+   MessageBox.Show('unknown data')
+ end;
+ 
 procedure Form1.textBox2_TextChanged(sender: Object; e: EventArgs);
 begin
   
@@ -54,10 +60,14 @@ begin
   textBox3.text:='';
   if not StringIsEmpty(textBox1.Text, from) and not StringisEmpty(textBox2.Text, from) then
       begin
+      try
       label4.visible := false;
       a := strtoreal(textBox1.text);
       b := strtoreal(textBox2.Text);
       textBox3.text := (a + b).ToString
+      except
+        Error
+      end
       end
   else
     begin
@@ -98,10 +108,14 @@ begin
   textBox3.text:='';
   if not StringIsEmpty(textBox1.Text, from) and not StringisEmpty(textBox2.Text, from) then
       begin
+      try
       label4.visible := false;
       a := strtoreal(textBox1.text);
       b := strtoreal(textBox2.Text);
       textBox3.text := (a - b).ToString
+      except
+        Error
+      end
       end
   else
     begin
@@ -116,10 +130,14 @@ begin
   textBox3.text:='';
   if not StringIsEmpty(textBox1.Text, from) and not StringisEmpty(textBox2.Text, from) then
       begin
+      try
       label4.visible := false;
       a := strtoreal(textBox1.text);
       b := strtoreal(textBox2.Text);
       textBox3.text := (a / b).ToString
+      except
+        Error
+      end
       end
   else
     begin
@@ -134,16 +152,19 @@ begin
   textBox3.text:='';
   if not StringIsEmpty(textBox1.Text, from) and not StringisEmpty(textBox2.Text, from) then
       begin
+      try
       label4.visible := false;
       a := strtoreal(textBox1.text);
       b := strtoreal(textBox2.Text);
       textBox3.text := (a * b).ToString
+      except
+        Error
+      end
       end
   else
     begin
       label4.visible := true
     end
-  
 end;
 
 end.

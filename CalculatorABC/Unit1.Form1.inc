@@ -1,4 +1,4 @@
-﻿procedure InitializeComponent;
+procedure InitializeComponent;
     begin
         var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeof(Form1));
         self.label1 := new System.Windows.Forms.Label();
@@ -11,6 +11,7 @@
         self.button2 := new System.Windows.Forms.Button();
         self.button3 := new System.Windows.Forms.Button();
         self.button4 := new System.Windows.Forms.Button();
+        self.label4 := new System.Windows.Forms.Label();
         self.SuspendLayout();
         // 
         // label1
@@ -108,9 +109,20 @@
         self.button4.UseVisualStyleBackColor := true;
         self.button4.Click += button4_Click;
         // 
+        // label4
+        // 
+        self.label4.Font := new System.Drawing.Font('Microsoft Sans Serif', 10.2);
+        self.label4.ForeColor := System.Drawing.Color.Red;
+        self.label4.Location := new System.Drawing.Point(118, 192);
+        self.label4.Name := 'label4';
+        self.label4.Size := new System.Drawing.Size(83, 23);
+        self.label4.TabIndex := 10;
+        self.label4.Text := 'ERROR';
+        // 
         // Form1
         // 
         self.ClientSize := new System.Drawing.Size(282, 251);
+        self.Controls.Add(self.label4);
         self.Controls.Add(self.button4);
         self.Controls.Add(self.button3);
         self.Controls.Add(self.button2);
